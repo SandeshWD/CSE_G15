@@ -1,0 +1,279 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+} 
+
+.top-right {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex; 
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.top-right li {
+  margin-left: 20px;
+}
+
+.top-right a {
+  text-decoration: none; 
+  color : black
+}
+
+
+.card{
+  border : 1px solid hsl(0, 0%, 80%);
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px hsla(0,0%,0%,0.1);
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  max-width: 250px;
+  display: inline-block;
+}
+
+.card .cardImg{
+  max-width: 100%;
+  height:auto;
+  border-radius: 10%;
+}
+
+
+.museum-card {
+  cursor: pointer;
+  margin: 20px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.museum-card:hover {
+  transform: scale(1.05);
+}
+
+.museum-img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.museum-card h2 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.museum-card p {
+  font-size: 1rem;
+  color: #555;
+} 
+
+.booking-page {
+  display: flex;
+  padding: 20px;
+}
+
+.museum-info {
+  display: flex;
+  align-items: center;
+}
+
+.museum-img {
+  width: 150px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.museum-details {
+  max-width: 600px;
+}
+
+.museum-details h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.museum-details p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+.ticket-form {
+  margin-top: 20px;
+}
+
+.ticket-form input {
+  margin-right: 10px;
+}
+
+.ticket-form button {
+  padding: 10px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.ticket-form button:hover {
+  background-color: #45a049;
+}
+
+/* My Tickets Page */
+.my-tickets-page {
+  padding: 20px;
+}
+
+.ticket-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.ticket {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
+  width: 200px;
+}
+
+.ticket-img {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.ticket-details h3 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.ticket-details p {
+  margin: 5px 0;
+  color: #555;
+}
+
+/* -------------- */
+.footer {
+  padding: 20px;
+  text-align: center;
+  position: relative; /* Ensures the chatbot box is positioned relative to the footer if needed */
+}
+
+/* Chatbot box styling */
+.chatbot-box {
+  position: fixed; /* Fixes the box to the viewport */
+  bottom: 20px;   /* Distance from the bottom */
+  right: 20px;     /* Distance from the left */
+  width: 300px;   /* Fixed width for the box */
+  max-height: 400px; /* Limits height, scrollable if content exceeds */
+  background-color: #fff; /* White background for the box */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 10px; /* Inner spacing */
+  z-index: 1000; /* Ensures it stays above other content */
+  overflow: hidden; /* Prevents overflow outside the box */
+}
+
+/* Chatbot header */
+.chatbot-box h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Chat history styling */
+.chat-history {
+  max-height: 300px; /* Limits the chat history height */
+  overflow-y: auto; /* Adds scrollbar if content overflows */
+  margin-bottom: 10px;
+  padding: 5px;
+  border-bottom: 1px solid #eee; /* Separator between history and input */
+}
+
+/* User and bot message styling */
+.chat-history p.user {
+  text-align: right;
+  color: #007bff; /* Blue for user messages */
+  margin: 5px 0;
+}
+
+.chat-history p.assistant {
+  text-align: left;
+  color: #28a745; /* Green for bot messages */
+  margin: 5px 0;
+}
+
+/* Chat input form styling */
+.chat-form {
+  display: flex;
+  gap: 5px;
+}
+
+.chat-form input {
+  flex-grow: 1;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.chat-form button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.chat-form button:hover {
+  background-color: #0056b3;
+}
+
+/* ---------------------------------- */
+.my-tickets-page { padding: 20px; }
+.ticket-list { display: flex; flex-wrap: wrap; gap: 20px; }
+.ticket { border: 1px solid #ccc; padding: 10px; width: 300px; border-radius: 8px; }
+.ticket-img { width: 100%; height: auto; }
+.no-image {
+  width: 100%; height: 150px; background-color: #f0f0f0;
+  display: flex; align-items: center; justify-content: center;
+  color: #666; font-style: italic;
+}
+.ticket-details h3 { margin: 10px 0; }
+.ticket-details p { margin: 5px 0; }
+.ticket-details button {
+  margin-top: 10px; padding: 5px 10px; background-color: #28a745;
+  color: white; border: none; border-radius: 4px; cursor: pointer;
+}
+.ticket-details button:hover { background-color: #218838; }
+
+.payment-modal {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); display: flex; justify-content: center;
+  align-items: center; z-index: 1000;
+}
+.modal-content {
+  background-color: white; padding: 20px; border-radius: 8px;
+  width: 400px; max-width: 90%; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+.modal-content h3 { margin: 0 0 10px; }
+.payment-form { display: flex; flex-direction: column; gap: 10px; }
+.payment-form label { display: flex; flex-direction: column; }
+.payment-form input {
+  margin-top: 5px; padding: 5px; border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.modal-buttons { display: flex; gap: 10px; margin-top: 10px; }
+.modal-buttons button {
+  padding: 5px 10px; border: none; border-radius: 4px; cursor: pointer;
+}
+.modal-buttons button[type="submit"] { background-color: #007bff; color: white; }
+.modal-buttons button[type="submit"]:hover { background-color: #0056b3; }
+.modal-buttons button[type="button"] { background-color: #dc3545; color: white; }
+.modal-buttons button[type="button"]:hover { background-color: #c82333; }

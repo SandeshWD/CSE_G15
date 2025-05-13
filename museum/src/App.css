@@ -1,0 +1,485 @@
+
+/* -----------------------------------Main from here ------------------------------------ */
+/* General */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+.header {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+.header nav {
+  display: flex;
+  gap: 15px;
+}
+.header nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+.header nav a:hover {
+  text-decoration: underline;
+}
+.header nav button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.header nav button:hover {
+  background-color: #c82333;
+}
+
+/* Auth Pages (Register/Login) */
+.auth-form {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 8px;
+  width: 280px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.auth-form h2 {
+  margin: 0;
+  font-size: 20px;
+  text-align: center;
+}
+.auth-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.auth-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+.auth-form input {
+  margin-top: 5px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.auth-form button {
+  padding: 8px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.auth-form button:hover {
+  background-color: #218838;
+}
+.auth-form p {
+  margin: 10px 0 0;
+  text-align: center;
+  font-size: 12px;
+}
+.auth-form a {
+  color: #007bff;
+  text-decoration: none;
+}
+.auth-form a:hover {
+  text-decoration: underline;
+}
+
+.chatbot-box {
+  width: 25%;
+  max-height: 400px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.chatbot-box h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  color: #333;
+}
+.chat-history {
+  flex-grow: 1;
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-bottom: 1px solid #eee;
+}
+.chat-history p.user {
+  text-align: right;
+  color: #007bff;
+  margin: 5px 0;
+}
+.chat-history p.assistant {
+  text-align: left;
+  color: #28a745;
+  margin: 5px 0;
+}
+.chat-form {
+  display: flex;
+  gap: 5px;
+}
+.chat-form input {
+  flex-grow: 1;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.chat-form button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.chat-form button:hover {
+  background-color: #0056b3;
+}
+.copyright {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  font-size: 12px;
+  color: #666;
+}
+
+.booking-page { padding: 20px; }
+.museum-info { display: flex; gap: 20px; }
+.museum-img { width: 300px; height: auto; border-radius: 8px; }
+.museum-details { flex-grow: 1; }
+.museum-details h2 { margin: 0 0 10px; }
+.museum-details p { margin: 0 0 20px; }
+.ticket-form { display: flex; flex-direction: column; gap: 10px; }
+.ticket-form label { display: flex; flex-direction: column; }
+.ticket-form input { margin-top: 5px; padding: 5px; border: 1px solid #ddd; border-radius: 4px; }
+.ticket-form button {
+  padding: 10px; background-color: #28a745; color: white;
+  border: none; border-radius: 4px; cursor: pointer;
+}
+.ticket-form button:hover { background-color: #218838; }
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+.booking-form, .payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.booking-form label, .payment-form label {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.booking-form input, .payment-form input {
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.booking-form button, .payment-form button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.booking-form button:hover, .payment-form button:hover {
+  background-color: #0056b3;
+}
+
+.payment-form button[type="button"] {
+  background-color: #dc3545;
+}
+
+.payment-form button[type="button"]:hover {
+  background-color: #c82333;
+}
+
+.ticket-details {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+}
+
+.ticket-details h3 {
+  margin-top: 0;
+  font-size: 1.2em;
+}
+
+.ticket-details p {
+  margin: 5px 0;
+}
+
+.footer {
+  width: 25%;
+  position: fixed;
+  bottom: 0;
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-top: 1px solid #dee2e6;
+  text-align: center;
+}
+
+.auth-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 60px); /* Adjust for 60px header */
+  background: url('./assets/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Styles for MyTickets */
+.my-tickets h2 {
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  color: #333;
+}
+
+.ticket-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.ticket-card {
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  transition: transform 0.2s;
+}
+
+.ticket-card:hover {
+  transform: translateY(-5px);
+}
+
+.ticket-card h3 {
+  margin: 0 0 15px;
+  font-size: 1.5em;
+  color: #007bff;
+}
+
+.ticket-card .ticket-details p {
+  margin: 8px 0;
+  font-size: 1em;
+  color: #555;
+}
+
+.ticket-card .ticket-details p strong {
+  color: #333;
+}
+
+.status-paid {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.status-pending {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+/* Styles for museum cards */
+.museum-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Styles for Chatbot in Footer */
+.chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.chatbot-toggle {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s;
+}
+
+.chatbot-toggle:hover {
+  background-color: #0056b3;
+}
+
+.chatbot-window {
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.chatbot-header {
+  padding: 10px;
+  border-bottom: 1px solid #dee2e6;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.chatbot-book-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.chatbot-book-button:hover {
+  background-color: #218838;
+}
+
+.chatbot-messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.chatbot-message {
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.chatbot-message.user {
+  background-color: #007bff;
+  color: white;
+  margin-left: 20%;
+  text-align: right;
+}
+
+.chatbot-message.assistant {
+  background-color: #f8f9fa;
+  margin-right: 20%;
+  text-align: left;
+}
+
+.chatbot-welcome {
+  color: #555;
+  font-size: 14px;
+  text-align: center;
+}
+
+.chatbot-input {
+  display: flex;
+  padding: 10px;
+  gap: 10px;
+}
+
+.chatbot-input input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.chatbot-input button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.chatbot-input button:hover {
+  background-color: #0056b3;
+}
+
+.chatbot-payment-form {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+}
+
+.chatbot-payment-form input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.chatbot-payment-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.chatbot-payment-form button:hover {
+  background-color: #0056b3;
+}
